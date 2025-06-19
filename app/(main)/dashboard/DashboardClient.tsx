@@ -82,14 +82,13 @@ export default function DashboardClient({ user, initialProducts }: DashboardClie
 
         try {
             let response: AxiosResponse<Product>;
-            const apiPort = 5050;
 
             if (isEditMode) {
-                response = await axios.put<Product>(`http://localhost:${apiPort}/products/${productData.id}`, productData);
+                response = await axios.put<Product>(`https://uascspbackend-production.up.railway.app/products/${productData.id}`, productData);
                 setProducts(products.map(p => p.id === productData.id ? response.data : p));
                 toast.success('Product updated successfully!');
             } else {
-                response = await axios.post<Product>(`http://localhost:${apiPort}/products`, productData);
+                response = await axios.post<Product>(`https://uascspbackend-production.up.railway.app/products`, productData);
                 setProducts([...products, response.data]);
                 toast.success('Product added successfully!');
             }
@@ -103,8 +102,7 @@ export default function DashboardClient({ user, initialProducts }: DashboardClie
     const handleDelete = async (productId: number) => {
         if (window.confirm('Are you sure you want to delete this product?')) {
             try {
-                const apiPort = 5050;
-                await axios.delete(`http://localhost:${apiPort}/products/${productId}`);
+                await axios.delete(`https://uascspbackend-production.up.railway.app/products/${productId}`);
                 setProducts(products.filter(p => p.id !== productId));
                 toast.success('Product deleted successfully.');
             } catch (error) {

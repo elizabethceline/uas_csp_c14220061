@@ -6,7 +6,7 @@ import type { User, Product } from '../../../lib/types';
 
 async function getProducts(): Promise<Product[]> {
     try {
-        const response = await axios.get('http://localhost:5050/products');
+        const response = await axios.get('https://uascspbackend-production.up.railway.app/products');
         await new Promise(resolve => setTimeout(resolve, 500));
         return response.data;
     } catch (error) {

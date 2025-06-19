@@ -35,7 +35,7 @@ export default function SignInPage() {
 
         setIsLoading(true);
         try {
-            const response = await axios.get<User[]>('http://localhost:5050/users', {
+            const response = await axios.get<User[]>('https://uascspbackend-production.up.railway.app/users', {
                 params: { username, password },
             });
 
