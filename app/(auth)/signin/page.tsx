@@ -120,7 +120,7 @@ export default function SignInPage() {
                     </form>
                     <div className="text-center mt-6">
                         <p className="text-sm text-gray-500">
-                            Don't have an account?{' '}
+                            Don&apos;t have an account?{' '}
                             <a href="mailto:c14220061@john.petra.ac.id?subject=Hi Admin&body=I need an account!" target="_blank" className="font-medium text-indigo-700 hover:underline">
                                 Contact admin
                             </a>
