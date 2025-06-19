@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import axios from 'axios';
 import DashboardClient from './DashboardClient';
-import type { User, Product } from '../../lib/types';
+import type { User, Product } from '../../../lib/types';
 
 async function getProducts(): Promise<Product[]> {
     try {

@@ -3,8 +3,8 @@
 import { useState, useMemo } from 'react';
 import axios, { type AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
-import { ProductTable } from '../../components/ui/ProductTable';
-import type { User, Product } from '../../lib/types';
+import { ProductTable } from '../../../components/ui/ProductTable';
+import type { User, Product } from '../../../lib/types';
 
 const ITEMS_PER_PAGE = 5;
 
