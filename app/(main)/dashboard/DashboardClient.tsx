@@ -149,7 +149,7 @@ export default function DashboardClient({ user, initialProducts }: DashboardClie
                         <h2 className="text-xl font-bold text-slate-800">Product Management</h2>
                         <div className="relative w-full md:w-1/3">
                             <span className="absolute inset-y-0 left-0 flex items-center pl-3"><SearchIcon /></span>
-                            <input type="text" placeholder="Search product..." className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }} />
+                            <input type="text" placeholder="Search product..." className="w-full pl-10 pr-4 py-2 border rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }} />
                         </div>
                         <button onClick={() => handleOpenModal()} className="w-full md:w-auto cursor-pointer px-4 py-2 font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all">
                             + Add Product
@@ -178,15 +178,15 @@ export default function DashboardClient({ user, initialProducts }: DashboardClie
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700">Product Name</label>
-                                    <input type="text" name="nama_produk" value={currentProduct.nama_produk || ''} onChange={handleChange} className="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                                    <input type="text" name="nama_produk" value={currentProduct.nama_produk || ''} onChange={handleChange} className="w-full px-3 py-2 mt-1 border rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700">Unit Price</label>
-                                    <input type="number" name="harga_satuan" value={currentProduct.harga_satuan} onChange={handleChange} className="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                                    <input type="number" name="harga_satuan" value={currentProduct.harga_satuan} onChange={handleChange} className="w-full px-3 py-2 mt-1 border rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700">Quantity</label>
-                                    <input type="number" name="quantity" value={currentProduct.quantity} onChange={handleChange} className="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                                    <input type="number" name="quantity" value={currentProduct.quantity} onChange={handleChange} className="w-full px-3 py-2 mt-1 border rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
                                 </div>
                                 <div className="flex justify-end pt-4 space-x-3">
                                     <button type="button" onClick={handleCloseModal} className="cursor-pointer px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 font-semibold">Cancel</button>
